@@ -1,0 +1,44 @@
+name: ThrowMeSomeLove
+options:
+  bundleIdPrefix: com.throwmesomelove
+  deploymentTarget:
+    visionOS: "26.0"
+  createIntermediateGroups: true
+  developmentTeam: HD967VFFP3
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+
+schemes:
+  ThrowMeSomeLove:
+    build:
+      targets:
+        ThrowMeSomeLove: all
+    run:
+      config: Debug
+
+targets:
+  ThrowMeSomeLove:
+    type: application
+    platform: visionOS
+    sources:
+      - ThrowMeSomeLove
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.throwmesomelove.app
+        GENERATE_INFOPLIST_FILE: YES
+    info:
+      path: ThrowMeSomeLove/Info.plist
+      properties:
+        CFBundleDisplayName: Throw Me Some Love
+        UIApplicationSceneManifest:
+          UIApplicationPreferredDefaultSceneSessionRole: UIWindowSceneSessionRoleApplication
+          UIApplicationSupportsMultipleScenes: true
+          UISceneConfigurations: {}
+        NSMicrophoneUsageDescription: Record little sounds and voice notes to hang on your strings.
+        NSWorldSensingUsageDescription: Lets your gift boxes sit on your real tables and your strings stay hung where you put them.
